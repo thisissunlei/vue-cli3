@@ -18,6 +18,7 @@
 }
 #nav {
   padding: 30px;
+  background: url($src + 'images/500.png');
   a {
     font-weight: bold;
     color: #2c3e50;

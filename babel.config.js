@@ -1,19 +1,10 @@
+const plugins = [];
 module.exports = {
-  "presets": [
+  presets: [
     [
-      "@vue/app",
-      {
-        "useBuiltIns": "entry"
-      }
+      '@vue/app',
+      {'useBuiltIns': 'entry'} // polyfill
     ]
   ],
-  "plugins": [
-    [
-      "import",
-      {
-        "libraryName": "iview",
-        "libraryDirectory": "src/components"
-      }
-    ]
-  ]
-}
+  plugins: plugins
+};
