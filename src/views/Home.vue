@@ -9,11 +9,13 @@
 <script>
   // @ is an alias to /src
   import HelloWorld from '@/components/HelloWorld.vue'
+  import { Page } from 'iview';
 
   export default {
     name: 'home',
     components: {
-      HelloWorld
+      HelloWorld,
+      Page
     },
     mounted() {
       this.test();
@@ -21,7 +23,7 @@
     methods: {
       test() {
         let a = 1;
-        console.log(a)
+        console.log(a, 'test')
         console.log(this.$baseUrl)
       }
     }

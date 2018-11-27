@@ -1,4 +1,12 @@
-const plugins = [];
+const plugins = [
+  [
+    "import",
+    {
+      "libraryName": "iview",
+      "libraryDirectory": "src/components"
+    }
+  ]
+];
 module.exports = {
   presets: [
     [
