@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service --open serve",
-    "dev": "vue-cli-service serve --open --mode development",
     "build": "vue-cli-service build",
-    "analyz": "vue-cli-service build --mode analyz"
+    "analyz": "vue-cli-service build --mode analyz",
+    "dev": "vue-cli-service serve --open --mode development"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "iview": "^3.1.5",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
@@ -16,6 +18,7 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.1.1",
     "@vue/cli-service": "^3.1.4",
+    "babel-plugin-import": "^1.11.0",
     "compression-webpack-plugin": "^2.0.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",

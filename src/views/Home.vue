@@ -1,7 +1,8 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!--<HelloWorld msg="Welcome to Your Vue.js App"/>-->
+    <Page :current="1" :total="100"></Page>
   </div>
 </template>
 
@@ -21,6 +22,7 @@
       test() {
         let a = 1;
         console.log(a)
+        console.log(this.$baseUrl)
       }
     }
   }
