@@ -56,7 +56,7 @@
             loader: 'cache-loader',
             options: {
               cacheDirectory: '/Users/wangleping/krspace/kr-dev/code/project-vue/node_modules/.cache/vue-loader',
-              cacheIdentifier: '7409b362'
+              cacheIdentifier: '7e8d65ca'
             }
           },
           /* config.module.rule('vue').use('vue-loader') */
@@ -67,7 +67,7 @@
                 preserveWhitespace: false
               },
               cacheDirectory: '/Users/wangleping/krspace/kr-dev/code/project-vue/node_modules/.cache/vue-loader',
-              cacheIdentifier: '7409b362'
+              cacheIdentifier: '7e8d65ca'
             }
           }
         ]
@@ -80,7 +80,7 @@
           {
             loader: 'url-loader',
             options: {
-              limit: 4096,
+              limit: 10240,
               fallback: {
                 loader: 'file-loader',
                 options: {
@@ -1042,7 +1042,7 @@
             loader: 'cache-loader',
             options: {
               cacheDirectory: '/Users/wangleping/krspace/kr-dev/code/project-vue/node_modules/.cache/babel-loader',
-              cacheIdentifier: '7d25c595'
+              cacheIdentifier: 'c20607b8'
             }
           },
           /* config.module.rule('js').use('babel-loader') */
@@ -1102,13 +1102,6 @@
           /\.map$/,
           /hot-update\.js$/
         ]
-      }
-    ),
-    /* config.plugin('prefetch') */
-    new PreloadPlugin(
-      {
-        rel: 'prefetch',
-        include: 'asyncChunks'
       }
     ),
     /* config.plugin('copy') */

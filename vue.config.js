@@ -38,10 +38,16 @@ module.exports = {
      * https://cli.vuejs.org/zh/guide/html-and-static-assets.html#prefetch
      * 而且预渲染时生成的prefetch标签是modern版本的，低版本浏览器是不需要的
      */
-    //config.plugins.delete('prefetch');
+    config.plugins.delete('prefetch');
     //if(process.env.NODE_ENV === 'production') { // 为生产环境修改配置...process.env.NODE_ENV !== 'development'
     //} else {// 为开发环境修改配置...
     //}
+
+    config.module
+      .rule('images')
+      .use('url-loader')
+      .loader('url-loader')
+      .tap(options => Object.assign(options, { limit: 10240 }))
 
     config.resolve.alias
       .set('@', resolve('src'))
@@ -125,8 +131,8 @@ module.exports = {
   },
   // webpack-dev-server 相关配置 https://webpack.js.org/configuration/dev-server/
   devServer: {
-    // host: 'localhost',
-    host: "project-vue.krspace.cn",
+    host: '0.0.0.0',
+    // host: "project-vue.krspace.cn",
     port: 1998, // 端口号
     https: false, // https:{type:Boolean}
     open: true, //配置自动启动浏览器  http://172.16.1.12:7071/rest/mcdPhoneBar/
