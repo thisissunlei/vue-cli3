@@ -126,7 +126,7 @@ module.exports = {
   // webpack-dev-server 相关配置 https://webpack.js.org/configuration/dev-server/
   devServer: {
     // host: 'localhost',
-    host: "0.0.0.0",
+    host: "project-vue.krspace.cn",
     port: 1998, // 端口号
     https: false, // https:{type:Boolean}
     open: true, //配置自动启动浏览器  http://172.16.1.12:7071/rest/mcdPhoneBar/
@@ -145,7 +145,14 @@ module.exports = {
         //ws: true,//websocket支持
         secure: false
       },
-    }
+    },
+    disableHostCheck:true,//授权的 host
+    // historyApiFallback: {
+    //   rewrites: [
+    //     { from: /.*/, to: path.posix.join(config.dev.assetsPublicPath, 'index.html') },
+    //   ],
+    // },
+    overlay: true // 当出现编译器错误或警告时，在浏览器中显示全屏覆盖层。
   },
 
   // 第三方插件配置 https://www.npmjs.com/package/vue-cli-plugin-style-resources-loader
