@@ -68,18 +68,18 @@ module.exports = {
 
     //生产and测试环境
     let pluginsPro = [
-      new UglifyJsPlugin({
-        uglifyOptions: {
-          compress: {
-            warnings: false,
-            drop_console: true,
-            drop_debugger: false,
-            pure_funcs: ['console.log']//移除console
-          }
-        },
-        sourceMap: false,
-        parallel: true
-      }),
+      // new UglifyJsPlugin({
+      //   uglifyOptions: {
+      //     compress: {
+      //       warnings: false,
+      //       drop_console: true,
+      //       drop_debugger: false,
+      //       pure_funcs: ['console.log']//移除console
+      //     }
+      //   },
+      //   sourceMap: false,
+      //   parallel: true
+      // }),
       new CompressionPlugin({ //文件开启Gzip，也可以通过服务端(如：nginx)(https://github.com/webpack-contrib/compression-webpack-plugin)
         filename: '[path].gz[query]',
         algorithm: 'gzip',
