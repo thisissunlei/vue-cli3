@@ -142,11 +142,14 @@ module.exports = {
     hotOnly: true, // 热更新
     // proxy: 'http://localhost:8000'   // 配置跨域处理,只有一个代理
     proxy: { //配置自动启动浏览器
-      "/rest/*": {
-        target: "http://172.16.1.12:7071",
+      "/api": {
+        target: "http://optest02.krspace.cn",
         changeOrigin: true,
         // ws: true,//websocket支持
-        secure: false
+        secure: false,
+        pathRewrite: {
+          '^/api': '/api'
+        }
       },
       "/pbsevice/*": {
         target: "http://172.16.1.12:2018",
