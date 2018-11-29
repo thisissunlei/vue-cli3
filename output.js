@@ -56,7 +56,7 @@
             loader: 'cache-loader',
             options: {
               cacheDirectory: '/Users/wangleping/krspace/kr-dev/code/project-vue/node_modules/.cache/vue-loader',
-              cacheIdentifier: '7e8d65ca'
+              cacheIdentifier: 'c706a886'
             }
           },
           /* config.module.rule('vue').use('vue-loader') */
@@ -67,7 +67,7 @@
                 preserveWhitespace: false
               },
               cacheDirectory: '/Users/wangleping/krspace/kr-dev/code/project-vue/node_modules/.cache/vue-loader',
-              cacheIdentifier: '7e8d65ca'
+              cacheIdentifier: 'c706a886'
             }
           }
         ]
@@ -1042,7 +1042,7 @@
             loader: 'cache-loader',
             options: {
               cacheDirectory: '/Users/wangleping/krspace/kr-dev/code/project-vue/node_modules/.cache/babel-loader',
-              cacheIdentifier: 'c20607b8'
+              cacheIdentifier: '15f3386e'
             }
           },
           /* config.module.rule('js').use('babel-loader') */
