@@ -12,6 +12,7 @@
 1. npm run analyz
 
 ### 项目目录
+```
 project-vue
 	dist 打包目录
 	src 开发文件夹
@@ -21,10 +22,11 @@ project-vue
 		views 开发内容详情区
 		public 静态文件（不会被webpack打包，直接拷贝到dist）
 	.vue.config.js	主要配置文件
+```
 
 ### 项目UI
 https://www.iviewui.com/
-版本为 ^3.1.5
+版本为 `^3.1.5`
 
 
 
