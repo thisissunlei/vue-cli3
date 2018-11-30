@@ -2,7 +2,7 @@
 1. 项目依赖node环境,版本为9.4.0
 
 ### 项目启动
-1. npm i 
+1. npm i (或者 yarn)
 2. npm run dev
 
 ### 项目打包
