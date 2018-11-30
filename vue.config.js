@@ -4,7 +4,7 @@ const resolve = (dir) => path.join(__dirname, dir);
 
 const IS_PROD = ['production', 'prod'].includes(process.env.NODE_ENV);
 console.log('is_prod', IS_PROD)
-const baseUrl = IS_PROD ? "/project-vue-template/" : "/";
+const baseUrl = IS_PROD ? "/project-vue/" : "/";
 
 //Webpack包文件分析器
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
