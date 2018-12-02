@@ -1,3 +1,5 @@
+const pluginEnvs = require('./src/plugins/plugins.env');
+console.log('pluginEnvs', pluginEnvs)
 const path = require('path');
 const resolve = (dir) => path.join(__dirname, dir);
 // const vConsolePlugin = require('vconsole-webpack-plugin'); // 引入 移动端模拟开发者工具 插件 （另：https://github.com/liriliri/eruda）
@@ -43,17 +45,8 @@ module.exports = {
       .plugin('html')
       .tap(args => {
         args[0].files = {
-          js: [
-            'https://web.krspace.cn/kr-op/echarts/4.1.0/echarts.min.js',
-            'https://web.krspace.cn/kr-op/umeditor/1.0.0/ueditor.config.js',
-            'https://web.krspace.cn/kr-op/umeditor/1.0.0/ueditor.all.js',
-            'https://web.krspace.cn/kr-op/umeditor/1.0.0/lang/zh-cn/zh-cn.js',
-            'https://web.krspace.cn/kr-op/go/1.8.14/go.js',
-            'https://web.krspace.cn/plugins/watermark.js'
-          ],
-          css: [
-            'https://web.krspace.cn/kr-op/iview/2.8.0/styles/iview.css'
-          ]
+          js: pluginEnvs.jsFiles,
+          css: pluginEnvs.cssFiles
         };
         return args
       });
