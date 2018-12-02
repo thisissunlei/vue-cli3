@@ -1,5 +1,4 @@
 const pluginEnvs = require('./src/plugins/plugins.env');
-console.log('pluginEnvs', pluginEnvs)
 const path = require('path');
 const resolve = (dir) => path.join(__dirname, dir);
 // const vConsolePlugin = require('vconsole-webpack-plugin'); // 引入 移动端模拟开发者工具 插件 （另：https://github.com/liriliri/eruda）
