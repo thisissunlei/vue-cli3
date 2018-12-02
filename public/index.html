@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>project-vue-template</title>
+
+    <% _.each(htmlWebpackPlugin.options.files.css, function (item) { %>
+      <link rel="stylesheet" href="<%= item %>">
+    <% }); %>
+
+    <% _.each(htmlWebpackPlugin.options.files.js, function (item) { %>
+      <script src="<%= item %>"></script>
+    <% }); %>
+
   </head>
   <body>
     <noscript>

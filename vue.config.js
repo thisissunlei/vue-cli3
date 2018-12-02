@@ -39,6 +39,24 @@ module.exports = {
      * 而且预渲染时生成的prefetch标签是modern版本的，低版本浏览器是不需要的
      */
     config.plugins.delete('prefetch');
+    config
+      .plugin('html')
+      .tap(args => {
+        args[0].files = {
+          js: [
+            'https://web.krspace.cn/kr-op/echarts/4.1.0/echarts.min.js',
+            'https://web.krspace.cn/kr-op/umeditor/1.0.0/ueditor.config.js',
+            'https://web.krspace.cn/kr-op/umeditor/1.0.0/ueditor.all.js',
+            'https://web.krspace.cn/kr-op/umeditor/1.0.0/lang/zh-cn/zh-cn.js',
+            'https://web.krspace.cn/kr-op/go/1.8.14/go.js',
+            'https://web.krspace.cn/plugins/watermark.js'
+          ],
+          css: [
+            'https://web.krspace.cn/kr-op/iview/2.8.0/styles/iview.css'
+          ]
+        };
+        return args
+      });
     //if(process.env.NODE_ENV === 'production') { // 为生产环境修改配置...process.env.NODE_ENV !== 'development'
     //} else {// 为开发环境修改配置...
     //}
