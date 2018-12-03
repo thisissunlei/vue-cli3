@@ -1,4 +1,4 @@
-const pluginEnvs = require('./src/plugins/plugins.env');
+const pluginEnvs = require('./src/plugins.env');
 const path = require('path');
 const resolve = (dir) => path.join(__dirname, dir);
 // const vConsolePlugin = require('vconsole-webpack-plugin'); // 引入 移动端模拟开发者工具 插件 （另：https://github.com/liriliri/eruda）
@@ -145,8 +145,8 @@ module.exports = {
   },
   // webpack-dev-server 相关配置 https://webpack.js.org/configuration/dev-server/
   devServer: {
-    host: '0.0.0.0',
-    // host: "project-vue.krspace.cn",
+    // host: '0.0.0.0',
+    host: "project-vue.krspace.cn",
     port: 1998, // 端口号
     https: false, // https:{type:Boolean}
     open: true, //配置自动启动浏览器  http://172.16.1.12:7071/rest/mcdPhoneBar/
@@ -154,7 +154,7 @@ module.exports = {
     // proxy: 'http://localhost:8000'   // 配置跨域处理,只有一个代理
     proxy: { //配置自动启动浏览器
       "/api": {
-        target: "http://optest02.krspace.cn",
+        target: ("http://op" + process.env.NODE_ENV + ".krspace.cn") || 'http:optest01.krspace.cn',
         changeOrigin: true,
         // ws: true,//websocket支持
         secure: false,

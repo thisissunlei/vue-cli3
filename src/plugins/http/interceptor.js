@@ -1,4 +1,5 @@
-import Status from './status';
+import handleStatus from './status';
+import handleCode from './code';
 import Qs from "qs";
 import axios from "axios";
 //添加一个请求拦截器，用于设置请求过渡状态
@@ -15,10 +16,10 @@ const requestInterceptor = axios.interceptors.request.use(config => {
 
 //添加一个响应拦截器
 const responseInterceptor = axios.interceptors.response.use(response => {
-  return response;
+  return handleCode(response);
 }, error => {
   if (error.response) {
-    return Status.getStatus(error.response)
+    return handleStatus(error.response)
   }
 });
 

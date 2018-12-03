@@ -1,6 +1,6 @@
 const envs = {
   'development': {
-    'plugins': 'http://optest01.krspace.cn',
+    'plugins': 'http://op.krspace.cn',
   },
   'test01': {
     'plugins': 'http://optest01.krspace.cn',
@@ -13,6 +13,18 @@ const envs = {
   },
   'test04': {
     'plugins': 'http://optest04.krspace.cn',
+  },
+  'test05': {
+    'plugins': 'http://optest05.krspace.cn',
+  },
+  'test06': {
+    'plugins': 'http://optest06.krspace.cn',
+  },
+  'test07': {
+    'plugins': 'http://optest07.krspace.cn',
+  },
+  'test08': {
+    'plugins': 'http://optest08.krspace.cn',
   },
   'dev01': {
     'plugins': 'http://dev01.krspace.cn',
@@ -39,8 +51,6 @@ const jsFiles = [
 ];
 
 const cssFiles = [
-  // pluginsDomain+'/iview/2.8.0/styles/iview.css' ,
-  'https://web.krspace.cn/kr-op/iview/2.8.0/styles/iview.css',
   pluginsDomain + '/nav/1.0.0/nav.css',
   pluginsDomain + '/public/css/main.css',
 ];

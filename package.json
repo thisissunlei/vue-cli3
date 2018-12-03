@@ -9,6 +9,10 @@
     "dev:test02": "NODE_ENV=test02 vue-cli-service serve --open --mode development",
     "dev:test03": "NODE_ENV=test03 vue-cli-service serve --open --mode development",
     "dev:test04": "NODE_ENV=test04 vue-cli-service serve --open --mode development",
+    "dev:test05": "NODE_ENV=test05 vue-cli-service serve --open --mode development",
+    "dev:test06": "NODE_ENV=test06 vue-cli-service serve --open --mode development",
+    "dev:test07": "NODE_ENV=test07 vue-cli-service serve --open --mode development",
+    "dev:test08": "NODE_ENV=test08 vue-cli-service serve --open --mode development",
     "build": "vue-cli-service build",
     "analyz": "vue-cli-service build --mode analyz"
   },

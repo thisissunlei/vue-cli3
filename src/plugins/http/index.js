@@ -35,23 +35,8 @@ function findUrl(url) {
 
 
 export default {
-  getJSON: (url, params, success, failure) => new Promise((resolve, reject) => {
-    axios.interceptors.request.eject(RequestIn.requestInterceptor);
-    axios.get(APIS[url].url, params)
-      .then(function (response) {
-        response = response.data;
-        success && success(response)
-        resolve(response)
-      })
-      .catch(function (error) {
-        if (error && error.data) {
-          error = error.data;
-          failure && failure(error)
-          reject(error)
-        }
-      });
-  }),
   postJSON: (url, params, success, failure) => new Promise((resolve, reject) => {
+    findUrl(url);
     axios.interceptors.request.eject(RequestIn.requestInterceptor);
     axios.post(APIS[url].url, params)
       .then(function (response) {
@@ -67,25 +52,11 @@ export default {
         }
       });
   }),
+
   putJSON: (url, params, success, failure) => new Promise((resolve, reject) => {
+    findUrl(url);
     axios.interceptors.request.eject(RequestIn.requestInterceptor);
     axios.put(APIS[url].url, params)
-      .then(function (response) {
-        response = response.data;
-        success && success(response)
-        resolve(response)
-      })
-      .catch(function (error) {
-        if (error && error.data) {
-          error = error.data;
-          failure && failure(error)
-          reject(error)
-        }
-      });
-  }),
-  delJSON: (url, params, success, failure) => new Promise((resolve, reject) => {
-    axios.interceptors.request.eject(RequestIn.requestInterceptor);
-    axios.delete(APIS[url].url, params)
       .then(function (response) {
         response = response.data;
         success && success(response)
