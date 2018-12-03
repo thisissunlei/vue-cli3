@@ -27,6 +27,7 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.1.1",
     "@vue/cli-service": "^3.1.4",
+    "auto-dynamic-routes": "^2.2.2",
     "babel-plugin-import": "^1.11.0",
     "compression-webpack-plugin": "^2.0.0",
     "node-sass": "^4.9.0",

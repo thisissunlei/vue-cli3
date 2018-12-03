@@ -1088,6 +1088,10 @@ atob@^2.1.1:
   version "2.1.2"
   resolved "http://registry.npm.taobao.org/atob/download/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
 
+auto-dynamic-routes@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/auto-dynamic-routes/-/auto-dynamic-routes-2.2.2.tgz#92a537d91acae5a3f748fddbe572a24749429ccd"
+
 autoprefixer@^8.6.5:
   version "8.6.5"
   resolved "http://registry.npm.taobao.org/autoprefixer/download/autoprefixer-8.6.5.tgz#343f3d193ed568b3208e00117a1b96eb691d4ee9"

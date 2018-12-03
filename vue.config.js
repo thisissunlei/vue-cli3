@@ -1,3 +1,4 @@
+const AutoDynamicPlugin = require('auto-dynamic-routes');
 const pluginEnvs = require('./src/plugins.env');
 const path = require('path');
 const resolve = (dir) => path.join(__dirname, dir);
@@ -57,7 +58,7 @@ module.exports = {
       .rule('images')
       .use('url-loader')
       .loader('url-loader')
-      .tap(options => Object.assign(options, { limit: 10240 }))
+      .tap(options => Object.assign(options, {limit: 10240}))
 
     config.resolve.alias
       .set('@', resolve('src'))
@@ -79,6 +80,14 @@ module.exports = {
       // 'vuex': 'Vuex',
       // 'axios': 'axios'
     }
+
+    // 基本插件
+    let pluginsBase = [
+      new AutoDynamicPlugin({
+        inPath: path.resolve(__dirname, './src/views'),
+        srcDir: 'views'
+      })
+    ];
 
     //生产and测试环境
     let pluginsPro = [
@@ -112,10 +121,10 @@ module.exports = {
     ];
 
     if (IS_PROD) { // 为生产环境修改配置...process.env.NODE_ENV !== 'development'
-      config.plugins = [...config.plugins, ...pluginsPro];
+      config.plugins = [...config.plugins, ...pluginsBase, ...pluginsPro];
     } else {
       // 为开发环境修改配置...
-      config.plugins = [...config.plugins, ...pluginsDev];
+      config.plugins = [...config.plugins, ...pluginsBase, ...pluginsDev];
     }
     if (process.env.IS_ANALYZ) {
       //	Webpack包文件分析器(https://github.com/webpack-contrib/webpack-bundle-analyzer)
@@ -169,7 +178,7 @@ module.exports = {
         secure: false
       },
     },
-    disableHostCheck:true,//授权的 host
+    disableHostCheck: true,//授权的 host
     // historyApiFallback: {
     //   rewrites: [
     //     { from: /.*/, to: path.posix.join(config.dev.assetsPublicPath, 'index.html') },
