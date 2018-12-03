@@ -104,7 +104,6 @@ body {
     background: #fff;
   }
 
- 、、
   .layout-hide-text .layout-text {
     display: none;
   }
