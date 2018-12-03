@@ -154,7 +154,7 @@ module.exports = {
     // proxy: 'http://localhost:8000'   // 配置跨域处理,只有一个代理
     proxy: { //配置自动启动浏览器
       "/api": {
-        target: ("http://op" + process.env.NODE_ENV + ".krspace.cn") || 'http:optest01.krspace.cn',
+        target: "http://op" + process.env.NODE_ENV + ".krspace.cn",
         changeOrigin: true,
         // ws: true,//websocket支持
         secure: false,
