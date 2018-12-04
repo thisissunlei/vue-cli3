@@ -6363,6 +6363,10 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
+vue-dateutils@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/vue-dateutils/-/vue-dateutils-1.0.8.tgz#6538229998d343be6333e0fec16bd45c2ecf8ada"
+
 vue-hot-reload-api@^2.3.0:
   version "2.3.1"
   resolved "http://registry.npm.taobao.org/vue-hot-reload-api/download/vue-hot-reload-api-2.3.1.tgz#b2d3d95402a811602380783ea4f566eb875569a2"

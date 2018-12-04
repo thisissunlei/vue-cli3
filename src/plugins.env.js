@@ -47,7 +47,8 @@ const jsFiles = [
   'https://web.krspace.cn/kr-op/umeditor/1.0.0/ueditor.all.js',
   'https://web.krspace.cn/kr-op/umeditor/1.0.0/lang/zh-cn/zh-cn.js',
   'https://web.krspace.cn/kr-op/go/1.8.14/go.js',
-  'https://web.krspace.cn/plugins/watermark.js'
+  'https://web.krspace.cn/plugins/watermark.js',
+  ' https://web.krspace.cn/kr-op/gt/1.0.0/gt.js '
 ];
 
 const cssFiles = [
