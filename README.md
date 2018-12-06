@@ -1,5 +1,5 @@
 ### 环境
-1. 项目依赖 `node` 环境,版本为 `10.14.1`
+1. 项目依赖 `node` 环境，版本为 `10.14.1`
 
 ### 项目启动
 1. npm i (或者 yarn)
@@ -21,6 +21,10 @@ project-vue
 	    assets 项目静态内容（项目自身公共样式，图片，js）
 	    components 项目公用组件
 	    plugins 不同项目间的公用方法（通过import引入使用）
+	        filters 常用的过滤器方法
+	        http ajax封装（status和code两种异常状态判断）
+	        utils 常用工具方法
+	    router 路由文件（自动路由生成）
 	    views 开发内容详情区
 	vue.config.js	主要配置文件
 	.env 环境变量配置
