@@ -31,7 +31,8 @@ project-vue
 ```
 
 ### 项目UI
-https://www.iviewui.com/ ，`iview` 版本为 `^3.1.5`
+https://www.iviewui.com/ ，`iview` 版本为 `^3.1.5`。
+
 iview 从 2 到 3 写法的改变有：
 - Button
   - (<b>不兼容</b>) 废弃 type ghost，原先的 default 样式有改变。Button 组件的type='ghost' 属性要去掉
