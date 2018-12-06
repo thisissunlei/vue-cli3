@@ -28,6 +28,24 @@ project-vue
 
 ### 项目UI
 https://www.iviewui.com/ ，`iview` 版本为 `^3.1.5`
+iview 从 2 到 3 写法的改变有：
+- Button
+  - (<b>不兼容</b>) 废弃 type ghost，原先的 default 样式有改变。Button 组件的type='ghost' 属性要去掉
+  - 新增属性 custom-icon，支持自定义图标
+  - 新增属性 to、replace、target，支持点击直接跳转
+  - 新增幽灵属性 ghost，可以使按钮背景透明，常用于有色背景上
+
+- Input
+  - i-input 改为 Input
+  - 新增属性 prefix 和 suffix 以及同名 slot，支持设置前缀和后缀图标
+  - 新增属性 search 和 enterButton，支持搜索类型的输入框
+  - 新增事件 @on-search，使用搜索类型输入框时，点击搜索或按下回车键时触发
+
+- Icon
+  - Icon 的图标升级至 ionicons 3.0 图标，图标名称有改变
+  - 新增属性 custom，支持自定义图标
+
+- 其他：其他语法的改动详见 <a>https://yuguo.site/2018/08/24/iview2-%E5%8D%87%E7%BA%A7-iview3/</a>
 
 
 
