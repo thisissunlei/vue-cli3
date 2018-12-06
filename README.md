@@ -42,7 +42,7 @@ iview 从 2 到 3 写法的改变有：
   - 新增事件 @on-search，使用搜索类型输入框时，点击搜索或按下回车键时触发
 
 - Icon
-  - Icon 的图标升级至 ionicons 3.0 图标，图标名称有改变
+  - (<b>不兼容</b>) Icon 的图标升级至 ionicons 3.0 图标，图标名称有改变
   - 新增属性 custom，支持自定义图标
 
 - 其他：其他语法的改动详见 https://yuguo.site/2018/08/24/iview2-%E5%8D%87%E7%BA%A7-iview3/
