@@ -2,10 +2,10 @@
  * @Author: hongyongbo
  * @Date: 2018-12-04 12:26:13
  * @LastEditors: hongyongbo
- * @LastEditTime: 2018-12-06 11:44:40
+ * @LastEditTime: 2018-12-06 17:04:22
  * @Description: 用于批量添加iview按需引用
  * @dest: views文件夹和components文件夹内的所有.vue文件
- * 
+ *
  */
 
 const fs = require("fs");
@@ -40,10 +40,10 @@ function injectDir(dir) {
   let stats = fs.statSync(dir);
   if (stats.isDirectory()) {
     return readdirPromisify(dir)
-      .then(list =>
-        Promise.all(list.map(item => injectDir(path.resolve(dir, item))))
-      )
-      .then(fileArr => [].concat(...fileArr));
+        .then(list =>
+            Promise.all(list.map(item => injectDir(path.resolve(dir, item))))
+        )
+        .then(fileArr => [].concat(...fileArr));
   } else {
     if (path.extname(dir).toUpperCase() === ".VUE") {
       injectVueFile(dir);
@@ -108,17 +108,17 @@ function injectVueFile(filePath) {
       }
 
       // 插入components
-      // let regComponent = /components:{([\s\S]+,?)+},/m;
-      let regComponent = /components\s?:\s?\{(.+?)\},/ms;
+      let regComponent = /components\s*:\s*\{(.+?)\},/ms;
       let m = data.match(regComponent);
       let components2Import = [];
       if (m) {
         //已有components：{}
         //获取已有的引用并从components数组中剔除，以免重复添加
-        let exist = m[1];
+        let exist=m[1].match(/\b(.+?)\b/gm)
         // console.log('exist',exist)
 
         components2Import = components.filter(item => !exist.includes(item));
+
         // console.log('components',components)
         // console.log('components2Import',components2Import)
         if (components2Import.length != 0) {

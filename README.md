@@ -3,7 +3,7 @@
 
 ### 项目启动
 1. npm i (或者 yarn)
-2. npm run dev
+2. npm run dev:test04 （或其他测试环境）
 
 ### 项目打包
 1. npm run build
