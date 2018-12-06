@@ -45,7 +45,7 @@ iview 从 2 到 3 写法的改变有：
   - Icon 的图标升级至 ionicons 3.0 图标，图标名称有改变
   - 新增属性 custom，支持自定义图标
 
-- 其他：其他语法的改动详见 <a>https://yuguo.site/2018/08/24/iview2-%E5%8D%87%E7%BA%A7-iview3/</a>
+- 其他：其他语法的改动详见 https://yuguo.site/2018/08/24/iview2-%E5%8D%87%E7%BA%A7-iview3/
 
 
 
