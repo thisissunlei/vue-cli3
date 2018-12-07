@@ -15,11 +15,12 @@ const requestInterceptor = axios.interceptors.request.use(config => {
 
 
 //添加一个响应拦截器
+let statusHandle = false; // 默认对ajax返回结果 根据code码进行处理，根据status状态判断的需把此变量置为 true
 const responseInterceptor = axios.interceptors.response.use(response => {
-  return handleCode(response);
+  return statusHandle ? response : handleCode(response);
 }, error => {
   if (error.response) {
-    return handleStatus(error.response)
+    return statusHandle ? handleStatus(error.response) : error.response;
   }
 });
 
