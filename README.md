@@ -50,7 +50,10 @@ iview 从 2 到 3 写法的改变有：
   - (<b>不兼容</b>) Icon 的图标升级至 ionicons 3.0 图标，图标名称有改变
   - 新增属性 custom，支持自定义图标
 
-- 其他：其他语法的改动详见 https://yuguo.site/2018/08/24/iview2-%E5%8D%87%E7%BA%A7-iview3/
+- 其他：其他语法的改动详见: [iview改动汇总](https://yuguo.site/2018/08/24/iview2-%E5%8D%87%E7%BA%A7-iview3/)
+
+### 路由
+路由采用自动生成路由插件，无需手动配置，模式为history模式，生产环境服务器需做相应配置: [常用服务器配置指引](https://router.vuejs.org/zh/guide/essentials/history-mode.html#%E5%90%8E%E7%AB%AF%E9%85%8D%E7%BD%AE%E4%BE%8B%E5%AD%90)
 
 
 
