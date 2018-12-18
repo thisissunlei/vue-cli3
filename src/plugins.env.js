@@ -57,7 +57,9 @@ const jsFiles = [
   // 高德地图
   'https://cache.amap.com/lbs/static/es5.min.js',
   'https://webapi.amap.com/maps?v=1.4.9&key=392b034f6d43dfa089a147a1282468d5&plugin=AMap.Geocoder,AMap.MarkerClusterer',
-  'https://webapi.amap.com/ui/1.0/main.js'
+  'https://webapi.amap.com/ui/1.0/main.js',
+  // 动画库
+  'https://web.krspace.cn/kr-op/TweenMax/1.20.3/TweenMax.min.js'
 ];
 
 const cssFiles = [
